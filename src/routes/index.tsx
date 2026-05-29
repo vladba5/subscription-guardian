@@ -40,7 +40,7 @@ function StatusBar() {
 function Phone({ label, children, dark }: { label: string; children: ReactNode; dark?: boolean }) {
   return (
     <div className="flex flex-col items-center gap-3">
-      <div className={dark ? "dark" : ""}>
+      <div className={dark ? "dark text-foreground" : "text-foreground"}>
         <div className="phone-frame">
           <div className="notch" />
           <div className="phone-screen">{children}</div>
