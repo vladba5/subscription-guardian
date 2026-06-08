@@ -120,9 +120,18 @@
 .phone-screen {
   position: absolute; inset: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   display: flex; flex-direction: column;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-.phone-screen::-webkit-scrollbar { display: none; }
+.phone-screen,
+.phone-screen * {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.phone-screen::-webkit-scrollbar,
+.phone-screen *::-webkit-scrollbar { display: none; width: 0; height: 0; }
 .notch {
   position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
   width: 110px; height: 28px; background: oklch(0.1 0.01 150); border-radius: 999px; z-index: 50;
