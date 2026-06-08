@@ -40,6 +40,7 @@
 }
 
 :root {
+  color-scheme: light;
   --radius: 1rem;
   --background: oklch(0.985 0.005 120);
   --foreground: oklch(0.18 0.02 150);
