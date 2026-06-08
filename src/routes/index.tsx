@@ -266,7 +266,7 @@ function ScreenDashboard() {
 
       <div className="flex-1 space-y-3 overflow-hidden px-5 pt-2">
         {/* Hero card */}
-        <div className="relative overflow-hidden rounded-3xl bg-foreground p-5 text-background">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-surface p-5 text-foreground">
           <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/30 blur-2xl" />
           <div className="relative flex items-start justify-between">
             <div>
@@ -284,7 +284,7 @@ function ScreenDashboard() {
               </div>
             </div>
           </div>
-          <div className="relative mt-4 flex items-center justify-between border-t border-white/10 pt-3">
+          <div className="relative mt-4 flex items-center justify-between border-t border-border pt-3">
             <div>
               <p className="text-[10px] opacity-60">Yearly</p>
               <p className="text-[13px] font-semibold">$1,529</p>
@@ -577,7 +577,7 @@ function ScreenPaywall() {
       </div>
 
       <div className="flex-1 overflow-y-auto px-5 pb-4 pt-2">
-        <div className="relative overflow-hidden rounded-3xl bg-foreground p-5 text-background">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-surface p-5 text-foreground">
           <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full bg-primary/30 blur-2xl" />
           <div className="relative">
             <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary">
