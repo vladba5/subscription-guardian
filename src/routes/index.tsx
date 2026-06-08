@@ -577,7 +577,7 @@ function ScreenPaywall() {
       </div>
 
       <div className="flex-1 overflow-y-auto px-5 pb-4 pt-2">
-        <div className="relative overflow-hidden rounded-3xl bg-[oklch(0.18_0.012_150)] p-5 text-white">
+        <div className="relative overflow-hidden rounded-3xl bg-foreground p-5 text-background">
           <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full bg-primary/30 blur-2xl" />
           <div className="relative">
             <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary">
