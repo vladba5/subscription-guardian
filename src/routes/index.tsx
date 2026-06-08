@@ -266,7 +266,7 @@ function ScreenDashboard() {
 
       <div className="flex-1 space-y-3 overflow-hidden px-5 pt-2">
         {/* Hero card */}
-        <div className="relative overflow-hidden rounded-3xl bg-[oklch(0.18_0.012_150)] p-5 text-white">
+        <div className="relative overflow-hidden rounded-3xl bg-foreground p-5 text-background">
           <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/30 blur-2xl" />
           <div className="relative flex items-start justify-between">
             <div>
