@@ -284,7 +284,7 @@ function ScreenDashboard() {
               </div>
             </div>
           </div>
-          <div className="relative mt-4 flex items-center justify-between border-t border-white/10 pt-3">
+          <div className="relative mt-4 flex items-center justify-between border-t border-border pt-3">
             <div>
               <p className="text-[10px] opacity-60">Yearly</p>
               <p className="text-[13px] font-semibold">$1,529</p>
