@@ -77,12 +77,14 @@ function BottomNav({ active }: { active: "home" | "subs" | "insights" | "setting
 
 function Logo({ size = 36 }: { size?: number }) {
   return (
-    <div
+    <img
+      src={recurviaIcon.url}
+      alt="Recurvia"
+      width={size}
+      height={size}
       style={{ width: size, height: size }}
-      className="flex items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-[0_10px_24px_-12px_oklch(0.6_0.16_152/0.7)]"
-    >
-      <Leaf size={size * 0.55} strokeWidth={2.4} />
-    </div>
+      className="rounded-2xl shadow-[0_10px_24px_-12px_oklch(0.6_0.16_152/0.7)]"
+    />
   );
 }
 
