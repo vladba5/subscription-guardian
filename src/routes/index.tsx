@@ -767,14 +767,15 @@ function ScreenSettings() {
 /* ---------- gallery ---------- */
 
 const SCREENS: { key: string; label: string; render: () => ReactNode }[] = [
-  { key: "welcome",  label: "1. Welcome",        render: () => <ScreenWelcome /> },
-  { key: "signup",   label: "2. Sign Up",        render: () => <ScreenSignUp /> },
-  { key: "dash",     label: "3. Dashboard",      render: () => <ScreenDashboard /> },
-  { key: "list",     label: "4. Subscriptions",  render: () => <ScreenList /> },
-  { key: "details",  label: "5. Details",        render: () => <ScreenDetails /> },
-  { key: "add",      label: "6. Add / Edit",     render: () => <ScreenAdd /> },
-  { key: "paywall",  label: "7. Paywall",        render: () => <ScreenPaywall /> },
-  { key: "settings", label: "8. Settings",       render: () => <ScreenSettings /> },
+  { key: "welcome",    label: "1. Welcome",          render: () => <ScreenWelcome /> },
+  { key: "signup",     label: "2. Sign Up",          render: () => <ScreenSignUp /> },
+  { key: "dash",       label: "3. Dashboard",        render: () => <ScreenDashboard /> },
+  { key: "list",       label: "4. Subscriptions",    render: () => <ScreenList /> },
+  { key: "empty",      label: "5. Empty State",        render: () => <ScreenEmptyState /> },
+  { key: "details",    label: "6. Details",          render: () => <ScreenDetails /> },
+  { key: "add",        label: "7. Add / Edit",       render: () => <ScreenAdd /> },
+  { key: "paywall",    label: "8. Paywall",          render: () => <ScreenPaywall /> },
+  { key: "settings",   label: "9. Settings",         render: () => <ScreenSettings /> },
 ];
 
 function Index() {
