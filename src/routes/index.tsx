@@ -7,7 +7,7 @@ import {
   Filter, ArrowUpDown, MoreVertical, CreditCard, Tag, FileText, Clock, Shield,
   Download, Cloud, Smartphone, Globe, Lock, LogOut, User, ChevronDown, Eye, EyeOff,
   Zap, Crown, Infinity as InfinityIcon, BarChart3, Bookmark, Trash2, Edit3, Moon, Sun,
-  Mail, ArrowRight, Home, List, PieChart,
+  Mail, ArrowRight, Home, List, PieChart, ReceiptText,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -399,6 +399,50 @@ function ScreenList() {
   );
 }
 
+function ScreenEmptyState() {
+  const tags = ["All", "Active", "Trial", "Paused"] as const;
+  return (
+    <div className="flex h-full flex-col bg-background">
+      <StatusBar />
+      <div className="flex items-center justify-between px-5 pb-3 pt-1">
+        <h1 className="text-[22px] font-bold tracking-tight text-foreground">Subscriptions</h1>
+        <div className="flex gap-2">
+          <button className="flex h-9 w-9 items-center justify-center rounded-full bg-surface"><Filter size={15} /></button>
+          <button className="flex h-9 w-9 items-center justify-center rounded-full bg-surface"><ArrowUpDown size={15} /></button>
+        </div>
+      </div>
+
+      <div className="px-5">
+        <div className="flex h-11 items-center gap-2 rounded-xl bg-surface px-3">
+          <Search size={15} className="text-muted-foreground" />
+          <input placeholder="Search subscriptions" className="h-full w-full bg-transparent text-[13px] outline-none" />
+        </div>
+        <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
+          {tags.map((t, i) => (
+            <button key={t} className={`shrink-0 rounded-full px-3 py-1.5 text-[11px] font-semibold ${i === 0 ? "bg-primary text-primary-foreground" : "bg-surface text-muted-foreground"}`}>{t}</button>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-1 flex-col items-center justify-center px-8 text-center">
+        <div className="relative mb-5 flex h-20 w-20 items-center justify-center rounded-3xl bg-surface">
+          <div className="absolute inset-0 rounded-3xl bg-primary/10" />
+          <ReceiptText size={32} className="text-primary" />
+        </div>
+        <h3 className="text-[16px] font-semibold text-foreground">No subscriptions yet</h3>
+        <p className="mt-2 max-w-[220px] text-[13px] leading-relaxed text-muted-foreground">
+          Start tracking your recurring charges and never miss a renewal again.
+        </p>
+        <button className="mt-6 flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 text-[13px] font-semibold text-primary-foreground shadow-[0_10px_24px_-12px_oklch(0.6_0.16_152/0.7)]">
+          <Plus size={16} /> Add your first subscription
+        </button>
+      </div>
+
+      <BottomNav active="subs" />
+    </div>
+  );
+}
+
 function ScreenDetails() {
   const s = SERVICES[0];
   return (
@@ -723,14 +767,15 @@ function ScreenSettings() {
 /* ---------- gallery ---------- */
 
 const SCREENS: { key: string; label: string; render: () => ReactNode }[] = [
-  { key: "welcome",  label: "1. Welcome",        render: () => <ScreenWelcome /> },
-  { key: "signup",   label: "2. Sign Up",        render: () => <ScreenSignUp /> },
-  { key: "dash",     label: "3. Dashboard",      render: () => <ScreenDashboard /> },
-  { key: "list",     label: "4. Subscriptions",  render: () => <ScreenList /> },
-  { key: "details",  label: "5. Details",        render: () => <ScreenDetails /> },
-  { key: "add",      label: "6. Add / Edit",     render: () => <ScreenAdd /> },
-  { key: "paywall",  label: "7. Paywall",        render: () => <ScreenPaywall /> },
-  { key: "settings", label: "8. Settings",       render: () => <ScreenSettings /> },
+  { key: "welcome",    label: "1. Welcome",          render: () => <ScreenWelcome /> },
+  { key: "signup",     label: "2. Sign Up",          render: () => <ScreenSignUp /> },
+  { key: "dash",       label: "3. Dashboard",        render: () => <ScreenDashboard /> },
+  { key: "list",       label: "4. Subscriptions",    render: () => <ScreenList /> },
+  { key: "empty",      label: "5. Empty State",        render: () => <ScreenEmptyState /> },
+  { key: "details",    label: "6. Details",          render: () => <ScreenDetails /> },
+  { key: "add",        label: "7. Add / Edit",       render: () => <ScreenAdd /> },
+  { key: "paywall",    label: "8. Paywall",          render: () => <ScreenPaywall /> },
+  { key: "settings",   label: "9. Settings",         render: () => <ScreenSettings /> },
 ];
 
 function Index() {
