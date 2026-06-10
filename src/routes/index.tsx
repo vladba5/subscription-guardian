@@ -7,7 +7,7 @@ import {
   Filter, ArrowUpDown, MoreVertical, CreditCard, Tag, FileText, Clock, Shield,
   Download, Cloud, Smartphone, Globe, Lock, LogOut, User, ChevronDown, Eye, EyeOff,
   Zap, Crown, Infinity as InfinityIcon, BarChart3, Bookmark, Trash2, Edit3, Moon, Sun,
-  Mail, ArrowRight, Home, List, PieChart,
+  Mail, ArrowRight, Home, List, PieChart, ReceiptText,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
