@@ -1,12 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
+import recurviaIcon from "@/assets/recurvia-icon.png.asset.json";
 import {
   Sparkles, Plus, Search, Bell, Settings as SettingsIcon, ChevronRight, ChevronLeft,
   TrendingDown, TrendingUp, Wallet, Calendar, AlertCircle, Check, X, Pause, Play,
   Filter, ArrowUpDown, MoreVertical, CreditCard, Tag, FileText, Clock, Shield,
   Download, Cloud, Smartphone, Globe, Lock, LogOut, User, ChevronDown, Eye, EyeOff,
   Zap, Crown, Infinity as InfinityIcon, BarChart3, Bookmark, Trash2, Edit3, Moon, Sun,
-  Mail, ArrowRight, Home, List, PieChart, Leaf,
+  Mail, ArrowRight, Home, List, PieChart,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
